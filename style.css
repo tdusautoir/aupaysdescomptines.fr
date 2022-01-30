@@ -1,0 +1,687 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;900&display=swap');
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Nunito';
+    margin-right: 230px;
+    margin-left: 230px;
+}
+
+/* Menu Header */
+
+header
+{
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    padding: 10px 230px 10px 230px;
+    margin: -10px -230px 0px -230px;
+    transition: 0.4s;
+}
+
+header.sticky
+{
+    transition: 0.4s;
+}
+
+header.sticky .logo{
+    width: 150px;
+    height: 70px;
+    transition: 0.4s;
+}
+
+.logo
+{
+    width: 195px;
+    height: 91px;
+    align-self: center;
+    transition: 0.4s;
+}
+
+.nav-menu
+{
+    list-style: none;
+    display: flex;
+    align-self: center;
+}
+
+.nav-link
+{
+    text-decoration: none;
+    color: rgb(253, 117, 187);
+    font-family: 'Nunito Black';
+    font-size: 1.4em;
+    margin-left: 150px;
+    background: linear-gradient(to top, rgba(253, 117, 187, 0.4) 0%, rgba(253, 117, 187, 0.4) 4px, transparent 5px) no-repeat;
+    background-size: 0 100%;
+    transition: background-size 0.3s;
+}
+
+.nav-link:hover
+{
+    background-size: 100% 100%;
+}
+
+.nav-link.active
+{
+    background: linear-gradient(to top, rgba(253, 117, 187, 0.4) 0%, rgba(253, 117, 187, 0.4) 4px, transparent 5px) no-repeat;
+    background-size: 100% 100%;
+}
+
+/* Landing Page           PS : APDC = Au Pays des comptines */
+
+.landingPage
+{
+    background-image: url('image/LandingPicture.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 100%;
+    height: 830px;
+    padding: 0 230px 0 230px;
+    margin: 0 -230px 0 -230px;
+}
+
+.DefinitionAPDC
+{
+    border-radius: 10px;
+    display: inline-block;
+    background-color: rgba(128, 128, 128, 0.6);
+    color: white;
+    margin-top: 40px;
+    max-width: 800px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+}
+
+.ListDefAPDC
+{
+    list-style: none;
+    margin-left: -40px;
+    font-size: 1.6em;
+    font-family: 'Nunito SemiBold';
+}
+
+.ForMore
+{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.5em;
+    font-family: 'Nunito SemiBold';  
+}
+
+.ButtonForMore
+{
+    text-decoration: none;
+    border-radius: 5px; 
+    margin-right: -10px;
+    padding: 5px 10px 5px 10px;
+    background: linear-gradient(to top, rgba(128, 128, 128, 1) 0%, rgba(128, 128, 128, 1) 40px) no-repeat;
+    background-size: 0 100%;
+    transition: background-size 0.3s;
+    color: white;
+}
+
+i.fa-chevron-down
+{
+    font-size: 1.1em;
+}
+
+.ButtonForMore:visited
+{
+    color: white;
+}
+
+.ButtonForMore:hover
+{
+    background-size: 100% 100%;
+}
+
+i.iconForMore
+{
+    align-self: center;
+    font-size: 1.5em;
+    padding-left: 10px;
+}
+
+/* section : Notre etablissement */
+
+
+section.InfoEtablissement[id]::before
+{
+    content: '';
+    display: block;
+    height: 150px;
+    margin-top: -150px;
+    visibility: hidden;
+}
+
+section.InfoEtablissement
+{
+    margin-top: 100px;
+
+}
+
+h1.blue-title
+{
+    display: inline-block;
+    color: rgb(145, 157, 231);
+    background: linear-gradient(to top, rgb(145, 157, 231) 0%, rgb(145, 157, 231) 1px, transparent 2px) no-repeat;
+    background-size: 100px 100%;
+}
+
+h2.blue-subtitle
+{
+    margin: 35px 0 35px 0;
+    color: rgb(145, 157, 231);
+}
+
+div.SliderAndContent
+{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+}
+
+/* Content */
+
+div.Content
+{
+    width: 550px;
+    margin-top: -20px;
+    padding-right: 20px;
+}
+
+div.Content p
+{
+    font-size: 1.3em;
+    text-align: justify;
+    font-family: 'Nunito SemiBold';
+    color:rgb(80, 80, 80);
+}
+
+em
+{
+    color:rgb(145, 157, 231);
+    font-style: unset;
+}
+
+/* slider */
+
+div.slider
+{
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    min-width: 800px;   
+}
+
+div.slides
+{
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img{
+    width: 800px;
+    height: 500px;
+}
+
+/* navigation mannuel */
+
+.navigation-manual
+{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+    -moz-user-select: none; /* Firefox */
+    -webkit-user-select: none; /* Chrome, Safari, Opéra depuis la version 15 */
+    -ms-user-select: none; /* Internet explorer depuis la version 10 et Edge */
+    user-select: none; /* Propriété standard */
+}
+
+.manual-btn
+{
+    border: 2px solid white;
+    padding: 8px;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child)
+{
+    margin-right: 40px;
+}
+
+.manual-btn:hover
+{
+    background: white;
+}
+
+#radio1:checked ~ .first
+{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first
+{
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .first
+{
+    margin-left: -40%;
+}
+
+#radio4:checked ~ .first
+{
+    margin-left: -60%;
+}
+
+/* navigation automatique */
+
+.navigation-auto
+{
+    position: absolute;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 460px;
+}
+
+.navigation-auto div
+{
+    border: 2px solid white;
+    padding: 8px;
+    border-radius: 16px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child)
+{
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1
+{
+    background: white;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2
+{
+    background: white;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3
+{
+    background: white;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4
+{
+    background: white;
+}
+
+/* section : Informations Complémentaires */
+
+section.FurtherInformation
+{
+    margin-top: 40px;
+}
+
+h1.pink-title
+{
+    display: inline-block;
+    color: rgb(253, 117, 187);
+    background: linear-gradient(to top, rgb(253, 117, 187) 0%, rgb(253, 117, 187) 1px, transparent 2px) no-repeat;
+    background-size: 190px 100%;
+    margin: 20px 0 20px 0;
+}
+
+div.LocationAndSchedules
+{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+}
+
+.subtitle
+{
+    color: rgb(253, 117, 187);
+    font-size: 1.4em;
+}
+
+.MapGoogle
+{
+    border:0;
+    border-radius: 10px;
+}
+
+/* Div Location */
+
+div.location
+{
+    margin-right: 20px;
+}
+
+/* Div Schedules */
+
+div.schedules
+{
+    margin-top: -60px;
+}
+
+.schedules h2
+{
+    margin-top: 40px;
+}
+
+.schedules p 
+{
+    font-family: 'Nunito SemiBold';
+    color: rgb(80, 80, 80);
+    font-size: 1.2em;
+}
+
+/* Card Horaire d'ouverture */
+
+.card-schedules
+{
+    width: 650px;
+    height: 500px;
+    box-shadow:  20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+    border-radius: 10px;
+    color: rgb(80, 80, 80);
+    font-size: 1.2em;
+}
+
+.card-header
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 10px 5px 10px;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-header i.fa-clock
+{
+    font-size: 2.5em;
+    color:rgb(140, 140, 140); 
+}
+
+.card-title
+{
+    align-items: center;
+}
+
+.card-title h3
+{
+    margin: 0 auto;
+}   
+
+.card-title p 
+{
+    margin: 0 auto;
+    color: rgb(253, 117, 187);
+    font-family: 'Nunito SemiBold';
+}
+
+table
+{
+    width: 650px; 
+}
+
+tr
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 10px 15px 10px;
+    border-top: 1px solid #dee2e6;
+    font-family: 'Nunito SemiBold';
+}
+
+tr.active
+{
+    background-color: rgba(253, 117, 187, 0.5);
+    margin: 0px -2px 0 -2px;
+    padding:  15px 12px 15px 12px;
+    color: white;
+    font-size: 1.2em;
+}
+
+tr.active td, th
+{
+    font-family: 'Nunito Black';
+}
+
+/* Page Contact */
+
+
+section.main-content
+{
+    display: flex;
+    justify-content: space-between;
+    height: 640px;
+}
+
+.content-container
+{
+    margin-top: 15px;
+    width: 50%;
+    font-size: 1.3em;
+    font-family: 'Nunito SemiBold';
+}
+
+.content-container ul
+{
+    list-style: none;
+    margin: 50px 0 0 0;
+    padding: 0;
+}
+
+.content-container li
+{
+    display: flex;
+}
+
+.content-container span
+{
+    align-self: center;
+    margin-left: 20px;
+}
+
+.content-container i
+{
+    color: rgb(145, 157, 231);
+    font-size: 1.8em;
+}
+
+.content-container li:not(:first-child)
+{
+    margin-top: 25px;
+}
+    
+
+
+/* formulaire */
+
+h1.titleform
+{
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+div.form-container
+{
+    width: 600px;
+    height: 610px;
+    box-shadow:  10px 10px 30px #d9d9d9, -10px -10px 30px #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    align-self: center;
+    margin-top: 30px;
+}
+
+
+form
+{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+div.input-bloc
+{
+    height: 95px;
+}
+
+div.input-msg-bloc
+{
+    height: 200px;
+    margin-bottom: 15px;
+}
+
+input[type=text], textarea, input[type=email]
+{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+
+div.submit-bloc
+{
+    margin-top: 10px;
+    height: 20px;
+    align-self: center;
+}
+
+.submit-bloc button
+{
+    background-color: rgb(145, 157, 231);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.send-arrow
+{
+    transition: 0.5s;
+    margin-left: 10px;
+}
+      
+.submit-bloc button:hover {
+    background-color: rgb(106, 122, 226);
+}
+
+input:focus
+{
+    outline: none;
+}
+
+textarea
+{
+    resize: none;
+    height: 160px;
+}
+
+textarea:focus
+{
+    outline: none;
+}
+
+label
+{
+    font-size: 1.2em;
+    font-family: 'Nunito SemiBold';
+    color: rgb(80, 80, 80);
+    margin-bottom: 10px;
+}
+
+.error 
+{
+    border: 1px solid rgba(255, 0, 0, 0.6)!important;
+}
+
+.errorSubmit
+{
+    pointer-events: none;
+    background-color: lightgray!important;
+}
+.visible
+{
+    display: block!important;
+}
+
+form .msg-error
+{
+    display: none;
+    padding: 0;
+    color: red;
+    font-size: 'Nunito SemiBold';
+}
+
+.visible
+{
+    display: block;
+}
+
+/* PAGE EQUIPE */
+
+/* footer */
+
+footer
+{
+    background-color: #e1e1e1;
+    height: 80px;
+    margin: 70px -230px -40px -230px; 
+    padding-top: 25px;
+}
+
+.footer-content
+{
+    font-family: 'Nunito SemiBold';
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 230px 0 230px;
+}
+
+.footer-content a
+{
+    padding: 20px 0px 20px 20px;
+    text-decoration: none;
+}
+
+.footer-contact
+{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 0;
+}
