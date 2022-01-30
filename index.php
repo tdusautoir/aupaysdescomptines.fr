@@ -11,6 +11,7 @@ require 'horaires.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/49dbd7732f.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="image/apdc_favicon.ico"/>
     <script src="script-navbar.js"></script>
     <title>Au Pays des comptines</title>
 </head>

@@ -28,7 +28,7 @@ let sendArrow = document.getElementById("send-arrow");
 
 submit.addEventListener("mouseover", function(e) {
     sendArrow.style.marginLeft = "20px";
-    sendArrow.style.transition = "0.5s";
+    sendArrow.style.transition = "0.2s";
 });
 
 submit.addEventListener("mouseout", function(e) {
