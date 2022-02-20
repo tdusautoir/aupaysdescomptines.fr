@@ -18,5 +18,16 @@
                 <?= nav_menu(); ?>
             </ul>
     </header>
+    <section class="section-profile-card">
+        <div>
+            <div class="card-profile"><img src="image/profiles/test.jpg"><p>Stephanie Dusautoir <span>Directrice</span></p></div>
+            <div class="card-profile"><img src="image/profiles/test.jpg"><p>Stephanie Dusautoir <span>Directrice</span></p></div>
+        </div>
+        <div>
+            <div class="card-profile"><img src="image/profiles/test.jpg"><p>Stephanie Dusautoir <span>Directrice</span></p></div>
+            <div class="card-profile"><img src="image/profiles/test.jpg"><p>Stephanie Dusautoir <span>Directrice</span></p></div>
+            <div class="card-profile"><img src="image/profiles/test.jpg"><p>Stephanie Dusautoir <span>Directrice</span></p></div>
+        </div>
+    </section>
 </body>
 </html>

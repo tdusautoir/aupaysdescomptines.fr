@@ -90,6 +90,7 @@ require 'horaires.php';
             </div>
         </div>           
     </section>
+    <div class="separator"></div>
     <section class="FurtherInformation">
         <h1 class="pink-title">Informations Complémentaires</h1>
         <div class="LocationAndSchedules">

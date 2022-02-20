@@ -7,9 +7,18 @@ html
 
 body{
     font-family: 'Nunito';
-    margin-right: 230px;
-    margin-left: 230px;
+    margin: 0 230px;
 }
+
+/* SOMMAIRE 
+
+- Menu Header
+- LANDING PAGE
+- PAGE CONTACT
+- PAGE EQUIPE
+- footer 
+
+*/
 
 /* Menu Header */
 
@@ -21,8 +30,8 @@ header
     position: sticky;
     top: 0;
     background-color: white;
-    padding: 10px 230px 10px 230px;
-    margin: -10px -230px 0px -230px;
+    padding: 10px 230px;
+    margin: 0px -230px;
     transition: 0.4s;
 }
 
@@ -75,7 +84,7 @@ header.sticky .logo{
     background-size: 100% 100%;
 }
 
-/* Landing Page           PS : APDC = Au Pays des comptines */
+/* LANDING PAGE          PS : APDC = Au Pays des comptines */
 
 .landingPage
 {
@@ -256,8 +265,8 @@ div.slides
     display: flex;
     justify-content: center;
     -moz-user-select: none; /* Firefox */
-    -webkit-user-select: none; /* Chrome, Safari, Opéra depuis la version 15 */
-    -ms-user-select: none; /* Internet explorer depuis la version 10 et Edge */
+    -webkit-user-select: none; /* Chrome, Safari, Opéra*/
+    -ms-user-select: none; /* Internet explorer*/
     user-select: none; /* Propriété standard */
 }
 
@@ -343,6 +352,7 @@ div.slides
 {
     background: white;
 }
+
 
 /* section : Informations Complémentaires */
 
@@ -476,14 +486,13 @@ tr.active td, th
     font-family: 'Nunito Black';
 }
 
-/* Page Contact */
+/* PAGE CONTACT */
 
 
 section.main-content
 {
     display: flex;
     justify-content: space-between;
-    height: 640px;
 }
 
 .content-container
@@ -654,6 +663,48 @@ form .msg-error
 
 /* PAGE EQUIPE */
 
+.section-profile-card{
+    margin-top: 100px;
+}
+
+.section-profile-card > div{
+    display: flex; 
+    justify-content: center;
+}
+
+.section-profile-card .card-profile:not(:last-child){
+    margin-right: 100px;
+}
+
+.card-profile{
+    width: 260px;
+}
+
+.card-profile img{
+    width: 260px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.card-profile p{
+    position: relative;
+    width: 85%;
+    height: 45px;
+    margin: 0 auto;
+    bottom: 80px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    font-family: "Montserrat";
+    text-align: center;
+}
+
+.card-profile span{
+    display: block;
+    color: rgb(253, 117, 187);
+    margin-top: 5px;
+}
+
 /* footer */
 
 footer
@@ -684,4 +735,18 @@ footer
     bottom: 0;
     width: 100%;
     margin-bottom: 0;
+}
+
+/* separators */
+
+
+.separator{
+    content: "";
+    width: 300px;
+    display: block;
+    height: 20px;
+    margin: 0 auto;
+    margin-top: 50px;
+    border-top: 3px solid rgb(145, 157, 231);
+    border-bottom: 3px solid rgb(253, 117, 187);
 }
