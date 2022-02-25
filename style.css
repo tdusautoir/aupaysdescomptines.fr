@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 html
 {
@@ -65,12 +66,12 @@ header.sticky .logo{
 {
     text-decoration: none;
     color: rgb(253, 117, 187);
-    font-family: 'Nunito Black';
     font-size: 1.4em;
     margin-left: 150px;
     background: linear-gradient(to top, rgba(253, 117, 187, 0.4) 0%, rgba(253, 117, 187, 0.4) 4px, transparent 5px) no-repeat;
     background-size: 0 100%;
     transition: background-size 0.3s;
+    font-weight: 800;
 }
 
 .nav-link:hover
@@ -116,7 +117,7 @@ header.sticky .logo{
     list-style: none;
     margin-left: -40px;
     font-size: 1.6em;
-    font-family: 'Nunito SemiBold';
+    font-weight: 500;
 }
 
 .ForMore
@@ -124,7 +125,7 @@ header.sticky .logo{
     display: flex;
     justify-content: flex-end;
     font-size: 1.5em;
-    font-family: 'Nunito SemiBold';  
+    font-weight: 500;
 }
 
 .ButtonForMore
@@ -176,7 +177,6 @@ section.InfoEtablissement[id]::before
 section.InfoEtablissement
 {
     margin-top: 100px;
-
 }
 
 h1.blue-title
@@ -213,7 +213,7 @@ div.Content p
 {
     font-size: 1.3em;
     text-align: justify;
-    font-family: 'Nunito SemiBold';
+    font-weight: 500;
     color:rgb(80, 80, 80);
 }
 
@@ -231,13 +231,13 @@ div.slider
     height: 500px;
     border-radius: 10px;
     overflow: hidden;
-    min-width: 800px;   
+    max-width: 800px;   
 }
 
 div.slides
 {
     width: 500%;
-    height: 500px;
+    height: 100%;
     display: flex;
 }
 
@@ -410,7 +410,7 @@ div.schedules
 
 .schedules p 
 {
-    font-family: 'Nunito SemiBold';
+    font-weight: 500;
     color: rgb(80, 80, 80);
     font-size: 1.2em;
 }
@@ -455,7 +455,7 @@ div.schedules
 {
     margin: 0 auto;
     color: rgb(253, 117, 187);
-    font-family: 'Nunito SemiBold';
+    font-weight: 500;
 }
 
 table
@@ -469,7 +469,7 @@ tr
     justify-content: space-between;
     padding: 15px 10px 15px 10px;
     border-top: 1px solid #dee2e6;
-    font-family: 'Nunito SemiBold';
+    font-weight: 500;
 }
 
 tr.active
@@ -483,7 +483,7 @@ tr.active
 
 tr.active td, th
 {
-    font-family: 'Nunito Black';
+    font-weight: 800;
 }
 
 /* PAGE CONTACT */
@@ -500,7 +500,7 @@ section.main-content
     margin-top: 15px;
     width: 50%;
     font-size: 1.3em;
-    font-family: 'Nunito SemiBold';
+    font-weight: 500;
 }
 
 .content-container ul
@@ -628,7 +628,7 @@ textarea:focus
 label
 {
     font-size: 1.2em;
-    font-family: 'Nunito SemiBold';
+    font-weight: 500;
     color: rgb(80, 80, 80);
     margin-bottom: 10px;
 }
@@ -653,7 +653,7 @@ form .msg-error
     display: none;
     padding: 0;
     color: red;
-    font-size: 'Nunito SemiBold';
+    font-weight: 500;
 }
 
 .visible
@@ -717,7 +717,7 @@ footer
 
 .footer-content
 {
-    font-family: 'Nunito SemiBold';
+    font-weight: 500;
     display: flex;
     justify-content: space-between;
     margin: 0px 230px 0 230px;
@@ -749,4 +749,41 @@ footer
     margin-top: 50px;
     border-top: 3px solid rgb(145, 157, 231);
     border-bottom: 3px solid rgb(253, 117, 187);
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1850px) {
+    /* HEADER */
+    .nav-link{
+        font-size: 1.3em;
+    }
+    /* LANDING PAGE */
+    .DefinitionAPDC h1{
+        font-size: 1.4em;
+    }
+    .ListDefAPDC {
+        font-size: 1.3em;
+    }
+    .ForMore{
+        font-size: 1.3em;
+    }
+    /* section : Notre etablissemnt */
+    div.slider {
+        width: 720px;
+        height: 450px;
+    }
+    .slide img {
+        width: 720px;
+        height: 450px;
+    }
+    h1.blue-title{
+        font-size: 1.3em;
+    }
+    .blue-subtitle{
+        font-size: 1.3em;
+    }
+    div.Content p{
+        font-size: 1.1em;
+    }
 }
