@@ -9,6 +9,7 @@
     <link href="style.css" rel="stylesheet">
     <link rel="shortcut icon" href="image/apdc_favicon.ico"/>
     <script src="https://kit.fontawesome.com/49dbd7732f.js" crossorigin="anonymous"></script>
+    <script src="script-navbar.js"></script>
     <title>Au Pays des comptines</title>
 </head>
 <body>
@@ -29,5 +30,10 @@
             <div class="card-profile"><img src="image/profiles/test.jpg"><p>Stephanie Dusautoir <span>Directrice</span></p></div>
         </div>
     </section>
+    <footer>
+        <div class="footer-content">
+            <p>Au Pays des comptines – © Copyright 2021, Tous droits réservés.</p><p><a href="#">Mentions Légales</a></p>
+        </div>
+    </footer>
 </body>
 </html>

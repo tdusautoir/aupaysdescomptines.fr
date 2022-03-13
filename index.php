@@ -13,6 +13,7 @@ require 'horaires.php';
     <script src="https://kit.fontawesome.com/49dbd7732f.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="image/apdc_favicon.ico"/>
     <script src="script-navbar.js"></script>
+    <script src="script-slider.js"></script>
     <title>Au Pays des comptines</title>
 </head>
 <body>
@@ -33,25 +34,26 @@ require 'horaires.php';
                 <li>Un accueil adapté au rythme de l'enfant.</li>
             </ul>
             <div class="ForMore">
-                <a class="ButtonForMore" href="#InfoEtablissement">En savoir plus... <i class="fas fa-chevron-down"></i></a>
+                <a class="ButtonForMore" href="#InfoEstablishment">En savoir plus... <i class="fas fa-chevron-down"></i></a>
             </div>
         </div>
     </section>
-    <section class="InfoEtablissement" id="InfoEtablissement">
+    <section class="InfoEstablishment" id="InfoEstablishment">
         <div class="SliderAndContent">
             <div class="Content">
                 <h1 class="blue-title">Notre établissement</h1>
-                <p><em>Notre micro-crèche</em> peut accueillir jusqu'a <em>10 enfants</em> à partir de l'âge de 
-                <em>2 mois et demi</em> et jusqu'a l'age de <em>6 ans</em>.</p>
+                <div>
+                <p>Notre micro-crèche peut accueillir<em>*</em> jusqu'a 10 enfants à partir de l'âge de 
+                2 mois et demi et jusqu'a l'age de 6 ans.</p>
 
-                <p>Sa capacité d'accueil limitée permet de créer un véritable <em>cocon</em> et un encadrement des enfants plus
-                <em>personnalisée</em> et <em>familial</em>.</p>
+                <p>Sa capacité d'accueil limitée permet de créer un véritable cocon et un encadrement des enfants plus
+                personnalisée et familial.</p>
 
-                <p>Sa surface est de <em>...m²</em>, elle est composée d'un dortoir, d'une salle de jeu, d'une terrasse et d'un jardin afin que chaque enfant puisse 
-                <em>s'épanouir</em> au sein de notre <em>crèche.</em></p>
+                <p>Sa surface est de ...m², elle est composée d'un dortoir, d'une salle de jeu, d'une terrasse et d'un jardin afin que chaque enfant puisse 
+                s'épanouir au sein de notre crèche.</p>
 
-                <h2 class="blue-subtitle">Accueil :</h2>
-                <p>A la journée <em>-</em> Plusieurs jours pas semaine <em>-</em> À la demi-journée <em>-</em> Entre 12h et 14h. </p>
+                <p class="blue-legend">* A la journée - Plusieurs jours pas semaine - À la demi-journée - Entre 12h et 14h.</p>
+                </div>
             </div>   
             <div class="slider">
                 <div class="slides">
@@ -82,15 +84,15 @@ require 'horaires.php';
                 </div>
                 <!-- manual naviation start -->
                 <div class="navigation-manual">
-                    <label for="radio1" class="manual-btn"></label>
-                    <label for="radio2" class="manual-btn"></label>
-                    <label for="radio3" class="manual-btn"></label>
-                    <label for="radio4" class="manual-btn"></label>
+                    <label for="radio1" tabindex= "0" class="manual-btn"></label>
+                    <label for="radio2" tabindex= "0" class="manual-btn"></label>
+                    <label for="radio3" tabindex= "0" class="manual-btn"></label>
+                    <label for="radio4" tabindex= "0" class="manual-btn"></label>
                 </div>
             </div>
         </div>           
     </section>
-    <div class="separator"></div>
+    <div class="separator"></div><div class="separator-pink"></div>
     <section class="FurtherInformation">
         <h1 class="pink-title">Informations Complémentaires</h1>
         <div class="LocationAndSchedules">
@@ -129,9 +131,8 @@ require 'horaires.php';
     </section>
     <footer>
         <div class="footer-content">
-            <p>Au Pays des comptines – © Copyright 2021, Tous droits réservés.</p><a href="">Mentions Légales</p>
+            <p>Au Pays des comptines – © Copyright 2021, Tous droits réservés.</p><p><a href="#">Mentions Légales</a></p>
         </div>
     </footer>
-    <script src="script-slider.js"></script>
 </body>
 </html>

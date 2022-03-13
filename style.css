@@ -162,10 +162,10 @@ i.iconForMore
     padding-left: 10px;
 }
 
-/* section : Notre etablissement */
+/* section : establishment */
 
 
-section.InfoEtablissement[id]::before
+section.InfoEstablishment[id]::before
 {
     content: '';
     display: block;
@@ -174,9 +174,10 @@ section.InfoEtablissement[id]::before
     visibility: hidden;
 }
 
-section.InfoEtablissement
+section.InfoEstablishment
 {
     margin-top: 100px;
+    margin-bottom: 80px;
 }
 
 h1.blue-title
@@ -209,12 +210,24 @@ div.Content
     padding-right: 20px;
 }
 
-div.Content p
+.Content h1{
+    margin-bottom: 50px;
+}
+
+div.Content p:not(:last-child)
 {
     font-size: 1.3em;
     text-align: justify;
-    font-weight: 500;
+    font-weight: 600;
     color:rgb(80, 80, 80);
+}
+
+.blue-legend
+{
+    font-size: 1.1em;
+    text-align: justify;
+    font-weight: 600;
+    color:#919de7;
 }
 
 em
@@ -358,7 +371,7 @@ div.slides
 
 section.FurtherInformation
 {
-    margin-top: 40px;
+    margin-top: 60px;
 }
 
 h1.pink-title
@@ -410,7 +423,7 @@ div.schedules
 
 .schedules p 
 {
-    font-weight: 500;
+    font-weight: 600;
     color: rgb(80, 80, 80);
     font-size: 1.2em;
 }
@@ -419,8 +432,6 @@ div.schedules
 
 .card-schedules
 {
-    width: 650px;
-    height: 500px;
     box-shadow:  20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
     border-radius: 10px;
     color: rgb(80, 80, 80);
@@ -455,12 +466,15 @@ div.schedules
 {
     margin: 0 auto;
     color: rgb(253, 117, 187);
-    font-weight: 500;
+    font-weight: 600;
 }
 
 table
 {
-    width: 650px; 
+    width: 100%;
+    width: -moz-available;          /* WebKit-based browsers will ignore this. */
+    width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+    width: fill-available;
 }
 
 tr
@@ -500,7 +514,7 @@ section.main-content
     margin-top: 15px;
     width: 50%;
     font-size: 1.3em;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .content-container ul
@@ -725,14 +739,12 @@ footer
 
 .footer-content a
 {
-    padding: 20px 0px 20px 20px;
     text-decoration: none;
 }
 
 .footer-contact
 {
     position: absolute;
-    bottom: 0;
     width: 100%;
     margin-bottom: 0;
 }
@@ -742,13 +754,20 @@ footer
 
 .separator{
     content: "";
-    width: 300px;
+    background-color: rgb(145, 157, 231);
+    width: 60%;
     display: block;
-    height: 20px;
+    height: 2px;
+}
+
+.separator-pink{
+    content: "";
+    background-color: rgb(253, 117, 187);
+    width: 30%;
+    display: block;
+    height: 2px;
+    float: right;
     margin: 0 auto;
-    margin-top: 50px;
-    border-top: 3px solid rgb(145, 157, 231);
-    border-bottom: 3px solid rgb(253, 117, 187);
 }
 
 /* RESPONSIVE */
@@ -768,7 +787,7 @@ footer
     .ForMore{
         font-size: 1.3em;
     }
-    /* section : Notre etablissemnt */
+    /* section : establishment */
     div.slider {
         width: 720px;
         height: 450px;
@@ -777,13 +796,157 @@ footer
         width: 720px;
         height: 450px;
     }
+    .navigation-manual{
+        width: 720px;
+    }
     h1.blue-title{
         font-size: 1.3em;
     }
     .blue-subtitle{
         font-size: 1.3em;
     }
-    div.Content p{
+    div.Content p:not(:last-child){
         font-size: 1.1em;
+    }
+    .blue-legend{
+        font-size: 1em;
+    }
+    /* section : Further-information */
+    .MapGoogle{
+        width: 700px
+    }
+    .schedules p {
+        font-size: 1.1em;
+    }
+}
+
+@media screen and (max-width: 1750px) {
+    /* HEADER */
+    /* LANDING PAGE */
+    /* section : establishment */
+    div.Content {
+        width: 450px;
+    }
+    div.slider {
+        width: 720px;
+        height: 450px;
+    }
+    .slide img {
+        width: 720px;
+        height: 450px;
+    }
+    .navigation-manual{
+        width: 720px;
+    }
+    /* section : Further-information */
+    .MapGoogle{
+        width: 600px
+    }
+    div.schedules
+    {
+        width: 570px;
+    }
+}
+
+@media screen and (max-width: 1670px) {
+    /* HEADER */
+    /* LANDING PAGE */
+    /* section : establishment */
+    div.Content {
+        width: 400px;
+    }
+    /* section : Further-information */
+    .MapGoogle{
+        width: 550px
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    /* HEADER */
+     .nav-link{
+        font-size: 1.2em;
+    }
+    /* LANDING PAGE */
+    .DefinitionAPDC h1{
+        font-size: 1.3em;
+    }
+    .ListDefAPDC {
+        font-size: 1.2em;
+    }
+    .ForMore{
+        font-size: 1.2em;
+    }
+    /* section : establishment */
+    h1.blue-title{
+        font-size: 1.2em;
+    }
+    .blue-subtitle{
+        font-size: 1.2em;
+    }
+    div.Content p:not(:last-child){
+        font-size: 1.0em;
+    }
+    .blue-legend{
+        font-size: 0.9em;
+    }
+    div.slider {
+        width: 648px;
+        height: 405px;
+    }
+    .slide img {
+        width: 648px;
+        height: 405px;
+    }
+    .navigation-manual{
+        width: 640px;
+    }
+    /* section : Further-information */
+    .MapGoogle {
+        width: 480px;
+    }
+}
+
+@media screen and (max-width: 1530px) {
+    /* HEADER */
+    /* LANDING PAGE */
+    /* section : establishment */
+    .Content h1 {
+        margin-bottom: 20px;
+    }
+    div.slider {
+        width: 600px;
+        height: 375px;
+    }
+    .slide img {
+        width: 600px;
+        height: 375px;
+    }
+    .navigation-manual{
+        width: 600px;
+    }
+    /* section : Further-information */
+    div.schedules
+    {
+        width: 520px;
+    }
+    .schedules p {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 1480px) {
+    /* HEADER */
+    /* LANDING PAGE */
+    /* section : establishment */
+    div.Content {
+        width: 350px;
+    }
+    /* section : Further-information */
+    div.schedules
+    {
+        width: 520px;
+    }
+    .MapGoogle {
+        width: 430px;
     }
 }

@@ -9,6 +9,7 @@
     <link href="style.css" rel="stylesheet">
     <link rel="shortcut icon" href="image/apdc_favicon.ico"/>
     <script src="https://kit.fontawesome.com/49dbd7732f.js" crossorigin="anonymous"></script>
+    <script src="script-navbar.js"></script>
     <title>Au Pays des comptines</title>
 </head>
 <body>
@@ -62,7 +63,7 @@
     <script src="script-contact.js"></script>
     <footer class="footer-contact">
         <div class="footer-content">
-            <p>Au Pays des comptines – © Copyright 2021, Tous droits réservés.</p><a href="">Mentions Légales</p>
+            <p>Au Pays des comptines – © Copyright 2021, Tous droits réservés.</p><p><a href="#">Mentions Légales</a></p>
         </div>
     </footer>
 </body>
