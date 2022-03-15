@@ -799,6 +799,10 @@ footer
     .navigation-manual{
         width: 720px;
     }
+    .navigation-auto{
+        width: 720px;
+        margin-top: 410px;
+    }
     h1.blue-title{
         font-size: 1.3em;
     }
@@ -826,17 +830,6 @@ footer
     /* section : establishment */
     div.Content {
         width: 450px;
-    }
-    div.slider {
-        width: 720px;
-        height: 450px;
-    }
-    .slide img {
-        width: 720px;
-        height: 450px;
-    }
-    .navigation-manual{
-        width: 720px;
     }
     /* section : Further-information */
     .MapGoogle{
@@ -900,6 +893,10 @@ footer
     .navigation-manual{
         width: 640px;
     }
+    .navigation-auto{
+        width: 640px;
+        margin-top: 365px;
+    }
     /* section : Further-information */
     .MapGoogle {
         width: 480px;
@@ -923,6 +920,10 @@ footer
     }
     .navigation-manual{
         width: 600px;
+    }
+    .navigation-auto{
+        width: 600px;
+        margin-top: 335px;
     }
     /* section : Further-information */
     div.schedules
