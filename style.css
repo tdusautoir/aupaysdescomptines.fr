@@ -951,3 +951,39 @@ footer
         width: 430px;
     }
 }
+
+@media screen and (max-width: 1430px) {
+    body{
+        margin: 0 200px;
+    }
+    /* HEADER */
+    .nav-link{
+        margin-left: 100px
+    }
+    /* LANDING PAGE */
+    .DefinitionAPDC h1{
+        font-size: 1.2em;
+    }
+    .ListDefAPDC{
+        font-size: 1.1em;
+    }
+    /* section : establishment */
+    /* section : Further-information */
+}
+
+@media screen and (max-width: 1375px) {
+    body{
+        margin: 0 170px;
+    }
+    /* HEADER */
+    /* LANDING PAGE */
+    /* section : establishment */
+    /* section : Further-information */
+}
+
+@media screen and (max-width: 1325px) {
+    /* HEADER */
+    /* LANDING PAGE */
+    /* section : establishment */
+    /* section : Further-information */
+}
