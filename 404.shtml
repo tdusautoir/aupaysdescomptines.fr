@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Oops, Erreur 404">
+        <link rel="shortcut icon" href="https://www.aupaysdescomptines.fr/media/favicon/apdc_favicon.ico" />
+        <link href="https://www.aupaysdescomptines.fr/fonts.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://www.aupaysdescomptines.fr/style.css">
+        <title>Au Pays des comptines</title>
+    </head>
+<body>
+    <div class="error404">
+        <div style="text-align: center;">
+            <h1>404</h1>
+            <p>Oops, la page que vous demandez est introuvable</p>
+            <a href="https://www.aupaysdescomptines.fr/">Revenir sur le site</a>
+        </div>
+    </div>
+</body>
+</html>

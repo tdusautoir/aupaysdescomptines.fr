@@ -1,0 +1,19 @@
+RewriteOptions inherit
+# o2switch pagespeed start / DO NOT REMOVE OR EDIT
+<IfModule pagespeed_module>
+ModPagespeed on
+ModPagespeedRewriteLevel PassThrough
+ModPagespeedEnableFilters extend_cache,hint_preload_subresources,lazyload_images,rewrite_images,strip_image_meta_data,sprite_images
+</IfModule>
+# o2switch pagespeed end / DO NOT REMOVE OR EDIT
+Options +FollowSymlinks 
+RewriteEngine on
+RewriteCond %{HTTPS} !=on
+RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+RewriteCond %{HTTP_HOST} ^aupaysdescomptines\.fr$
+RewriteRule ^/?$ "https\:\/\/www\.aupaysdescomptines\.fr\/" [R=301,L]
+RewriteRule ^contact$ contact.php
+RewriteRule ^equipe$ equipe.php
+RewriteRule ^mentions-legales$ legal-mentions.php
+RewriteRule ^accueil$ index.php
+
