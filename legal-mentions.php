@@ -33,7 +33,7 @@
             <p>
                 L’édition et la direction de la publication du Site est assurée par <strong>Thibaut Dusautoir.</strong><br />
                 <strong>Adresse :</strong> 55 rue de l'ancienne poste, 59310 Beuvry-la-forêt <br />
-                <strong>éléphone :</strong> 07 81 68 60 58 <br />
+                <strong>Téléphone :</strong> 07 81 68 60 58 <br />
                 <strong>Adresse email :</strong> thibautdusautoir@gmail.com.
             </p>
             <h2>L'HEBERGEUR</h2>
