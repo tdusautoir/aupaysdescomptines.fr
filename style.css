@@ -618,7 +618,7 @@ section.main-content
 
 .contact-container
 {
-    margin-top: 30px;
+    margin-top: 25px;
     width: 40%;
     font-size: 1.2em;
     font-weight: 600;
@@ -672,7 +672,7 @@ div.form-container
     border-radius: 10px;
     padding: 20px;
     align-self: center;
-    margin-top: 30px;
+    margin-top: 18px;
     opacity: 0;
     transform: translateX(100px);
 }
