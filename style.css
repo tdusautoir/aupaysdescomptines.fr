@@ -287,7 +287,6 @@ div.Content
 {
     width: 550px;
     margin-top: -20px;
-    padding-right: 20px;
 }
 
 .Content h1{
@@ -511,6 +510,7 @@ div.schedules
     margin-top: -60px;
     transform: translateX(100px);
     opacity: 0;
+    width: 44%;
 }
 
 div.schedules.active{
@@ -1040,10 +1040,6 @@ section.legal-mentions strong{
     .MapGoogle{
         width: 600px
     }
-    div.schedules
-    {
-        width: 570px;
-    }
 }
 
 @media screen and (max-width: 1670px) {
@@ -1092,7 +1088,7 @@ section.legal-mentions strong{
         height: 405px;
     }
     .navigation-auto{
-        width: 640px;
+        width: 648px;
         margin-top: 365px;
     }
     /* section : Further-information */
@@ -1149,10 +1145,6 @@ section.legal-mentions strong{
         margin-top: 335px;
     }
     /* section : Further-information */
-    div.schedules
-    {
-        width: 520px;
-    }
     .schedules p {
         font-size: 1em;
     }
@@ -1205,7 +1197,7 @@ section.legal-mentions strong{
         height: 405px;
     }
     .navigation-auto{
-        width: 640px;
+        width: 648px;
         margin-top: 365px;
     }
     /* section : Further-information */
@@ -1234,16 +1226,6 @@ section.legal-mentions strong{
     .MapGoogle{
         width: 550px;
     }
-}
-
-@media screen and (max-width: 1275px) {
-    /* HEADER */
-    /* LANDING PAGE */
-    /* section : establishment */
-    /* section : Further-information */
-    div.schedules {
-        width: 485px;
-    }    
 }
 
 @media screen and (max-width: 1250px) {
@@ -1290,9 +1272,6 @@ section.legal-mentions strong{
         font-size: 0.8em;
     }
     /* section : Further-information */
-    div.schedules {
-        width: 450px;
-    }
     .schedules p {
         font-size: 0.9em;
     }
@@ -1469,9 +1448,6 @@ section.legal-mentions strong{
         font-size: 0.7em;
     }
     /* section : Further-information */    
-    div.schedules {
-        width: 350px;
-    }
     .card-schedules {
         font-size: 0.8em;
     }
