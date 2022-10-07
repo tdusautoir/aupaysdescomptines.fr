@@ -1,7 +1,14 @@
 <?php
 
-require 'functions.php';
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
+require 'functions.php';
+require 'vendor/autoload.php';
+
+//Create an instance; passing `true` enables exceptions
+$mail = new PHPMailer(true);
 $sendmail = false;
 $success_send = false;
 $error_send = false;
@@ -37,38 +44,229 @@ if (isset($_POST['submit'])) {
                         $alert[MESSAGE] = true;
                         $alert_msg = "Les caractères spéciaux sont intérdits.";
                     } else {
-                        $to = "tdnet59@gmail.com";
+                        $to = "equipe@aupaysdescomptines.fr";
                         $subject = $_POST['object'];
-                        $mailContent = '
-                                <html>
-                                    <head>
-                                        <title>email reçu de votre site web</title>
-                                    </head>
-                                    <body>
-                                        <div align="center" margin-bottom="30px">
-                                            <img src="https://hoodspot.fr/uploads/801/091/80109161200029/logo.jpg" alt="Logo aupaysdescomptines.fr" width="200px">
-                                            <h1 align="center">Vous avez reçu un message depuis votre site web</h1>
-                                        </div>
-                                        <h2 style="font-size: 1.8em;">De la part de : </h2>
-                                        <ul style="list-style: none; font-size: 1.3em; margin: 0; padding: 0;">
-                                            <li style="margin: 0 0 10px 0;"><b>Nom et prénom</b> : ' . $name . '</li>
-                                            <li style="margin: 0;"><b>Email</b> : ' . $email . '</li>
-                                        </ul>
+                        $mailContent = "<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+                        <html xmlns='http://www.w3.org/1999/xhtml' xmlns:v='urn:schemas-microsoft-com:vml' xmlns:o='urn:schemas-microsoft-com:office:office'>
+                        <head>
+                            <!--[if gte mso 9]>
+                            <xml>
+                                <o:OfficeDocumentSettings>
+                                <o:AllowPNG/>
+                                <o:PixelsPerInch>96</o:PixelsPerInch>
+                                </o:OfficeDocumentSettings>
+                            </xml>
+                            <![endif]-->
+                            <meta http-equiv='Content-type' content='text/html; charset=utf-8' />
+                            <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1' />
+                            <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+                            <meta name='format-detection' content='date=no' />
+                            <meta name='format-detection' content='address=no' />
+                            <meta name='format-detection' content='telephone=no' />
+                            <meta name='x-apple-disable-message-reformatting' />
+                            <!--[if !mso]><!-->
+                            <link href='https://fonts.googleapis.com/css?family=Yantramanav:300,400,500,700' rel='stylesheet' />
+                            <!--<![endif]-->
+                            <title>Mot de pas oublié</title>
+                            <!--[if gte mso 9]>
+                            <style type='text/css' media='all'>
+                                sup { font-size: 100% !important; }
+                            </style>
+                            <![endif]-->
+                            
+    
+                            <style type='text/css' media='screen'>
+                                /* Linked Styles */
+                                body { padding:0 !important; margin:0 !important; display:block !important; min-width:100% !important; width:100% !important; background:#f4f4f4; -webkit-text-size-adjust:none }
+                                a { color:#2f774a; text-decoration:none }
+                                p { padding:0 !important; margin:0 !important } 
+                                img { -ms-interpolation-mode: bicubic; /* Allow smoother rendering of resized image in Internet Explorer */ }
+                                .mcnPreviewText { display: none !important; }
+    
+                                        
+                                /* Mobile styles */
+                                @media only screen and (max-device-width: 480px), only screen and (max-width: 480px) {
+                                    u + .body .gwfw { width:100% !important; width:100vw !important; }
+    
+                                    .m-shell { width: 100% !important; min-width: 100% !important; }
+                                    
+                                    .m-center { text-align: center !important; }
+                                    
+                                    .center { margin: 0 auto !important; }
+                                    .nav { text-align: center !important; }
+                                    .text-top { line-height: 22px !important; }
+                                    
+                                    .td { width: 100% !important; min-width: 100% !important; }
+                                    .bg { height: auto !important; -webkit-background-size: cover !important; background-size: cover !important; }
+    
+                                    .m-br-15 { height: 15px !important; }
+                                    .p30-15 { padding: 30px 15px !important; }
+                                    .p0-15-30 { padding: 0px 15px 30px 15px !important; }
+                                    .pb40 { padding-bottom: 40px !important; }
+                                    .pb0 { padding-bottom: 0px !important; }
+                                    .pb20 { padding-bottom: 20px !important; }
+    
+                                    .m-td,
+                                    .m-hide { display: none !important; width: 0 !important; height: 0 !important; font-size: 0 !important; line-height: 0 !important; min-height: 0 !important; }
+    
+                                    .m-height { height: auto !important; }
+    
+                                    .m-block { display: block !important; }
+    
+                                    .fluid-img img { width: 100% !important; max-width: 100% !important; height: auto !important; }
+    
+                                    .column,
+                                    .column-top,
+                                    .column-dir,
+                                    .column-bottom,
+                                    .column-dir-top,
+                                    .column-dir-bottom { float: left !important; width: 100% !important; display: block !important; }
+    
+                                    .content-spacing { width: 15px !important; }
+                                }
+                            </style>
+                        </head>
+                        <body class='body' style='padding:0 !important; margin:0 !important; display:block !important; min-width:100% !important; width:100% !important; background:#f4f4f4; -webkit-text-size-adjust:none;'>
+                            <table width='100%' border='0' cellspacing='0' cellpadding='0' bgcolor='#f4f4f4' class='gwfw'>
+                                <tr>
+                                    <td align='center' valign='top'>
+                                        <!-- Main -->
+                                        <table width='100%' border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td align='center' style='padding-bottom: 40px;' class='pb0'>
+                                                    <!-- Shell -->
+                                                    <table width='650' border='0' cellspacing='0' cellpadding='0' class='m-shell'>
+                                                        <tr>
+                                                            <td class='td' style='width:650px; min-width:650px; font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;'>
+                                                                <!-- Top Bar -->
+                                                                <table width='100%' border='0' cellspacing='0' cellpadding='0'>
+                                                                    <tr>
+                                                                        <td style='padding: 60px 40px 35px 40px;' class='p30-15'>
+                                                                            <table width='100%' border='0' cellspacing='0' cellpadding='0'>
+                                                                                <tr>
+                                                                                    <th class='column-top' width='204' style='font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;'>
+                                                                                        <table width='100%' border='0' cellspacing='0' cellpadding='0'>
+                                                                                        </table>
+                                                                                    </th>
+                                                                                    <th style='padding-bottom: 20px !important; font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;' class='column' width='1'></th>
+                                                                                    <th class='column' style='font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;'>
+                                                                                        <table width='100%' border='0' cellspacing='0' cellpadding='0'>
+                                                                                        </table>
+                                                                                    </th>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                                <!-- END Top Bar -->
+    
+                                                                <!-- Header -->
+                                                                <table width='100%' border='0' cellspacing='0' cellpadding='40' bgcolor='#ffffff' style='border-radius: 6px 6px 0px 0px;'>
+                                                                    <tr>
+                                                                        <td style=''>
+                                                                            <table width='100%' border='0' cellspacing='0' cellpadding='0'>
+                                                                                <tr>
+                                                                                    <center>
+                                                                                        <th class='column' width='118' style='font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;'>
+                                                                                            <table width='100%' border='0' cellspacing='0' cellpadding='0'>
+                                                                                                <tr>
+                                                                                                    <td class='img m-center' style='font-size:0pt; line-height:0pt; text-align:right;'><a href='#' target='_blank'><img src='https://www.aupaysdescomptines.fr/media/images/logo.jpg' width='120' height='58' border='0' alt='' /></a></td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                        </th>
+                                                                                    </center>
+                                                                                    <th class='column' style='font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;'>
+                                                                                        <table width='100%' border='0' cellspacing='0' cellpadding='0'>
+                                                                                            <tr>
+                                                                                                <td align='center'>
+                                                                                                    <table border='0' cellspacing='0' cellpadding='0' class='center' style='text-align:center;'>
+                                                                                                    </table>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </table>
+                                                                                    </th>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                                <!-- END Header -->
+                                                                
+                                                                <!-- Article Image On The Left -->
+                                                                <div mc:repeatable='Select' mc:variant='Article Image On The Left'>
+                                                                    <table width='100%' border='0' cellspacing='0' cellpadding='0' bgcolor='#ffffff'>
+                                                                        <tr>
+                                                                            <td style='padding: 0px 40px 40px 40px;' class='p0-15-30'>
+                                                                                <table width='100%' border='0' cellspacing='0' cellpadding='0'>
+                                                                                    <tr>
+                                                                                        <th class='column' style='font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;'>
+                                                                                            <table width='100%' border='0' cellspacing='0' cellpadding='0'>
+                                                                                                <tr>
+                                                                                                    <td class='h2' style='padding-bottom: 20px; color:#444444; font-family:Yantramanav, Arial, sans-serif; font-size:40px; line-height:46px; text-align:center; font-weight:300;'>Message reçu <span class='m-hide'><br /></span>depuis votre site web</td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td class='text' style='padding-bottom: 5px; color:#666666; font-family:Arial, sans-serif; font-size:16px; line-height:30px; text-align:center; min-width:auto !important;'>Nom et prénom : $name</td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td class='text' style='padding-bottom: 25px; color:#666666; font-family:Arial, sans-serif; font-size:16px; line-height:30px; text-align:center; min-width:auto !important;'>Mail : $email</td>
+                                                                                                </tr>
+                                                                                                
+                                                                                                <tr>
+                                                                                                    <td class='text' style='padding-bottom: 25px; color:#666666; font-family:Arial, sans-serif; font-size:16px; line-height:30px; text-align:center; min-width:auto !important;'>Message : $message</td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                        </th>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </div>
+                                                                <!-- END Article Image On The Left -->
+                                                                
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <!-- END Shell -->
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!-- END Main -->
+                                    </td>
+                                </tr>
+                            </table>
+                        </body>
+                        </html>";
 
-                                        <h2 style="font-size: 1.8em;">Message : </h2>
-                                            <p style="font-size: 1.3em;">' . $message . '</p>
-                                    </body>
-                                </html>
-                                ';
 
-                        $headers[] = 'Content-type: text/html; charset=UTF-8';
-                        $headers[] = "From: $email";
+                        try {
+                            //Server settings
 
-                        $sendmail = mail($to, $subject, $mailContent, implode("\r\n", $headers));
 
-                        if ($sendmail) {
+                            // for debug -> $mail->SMTPDebug = SMTP::DEBUG_SERVER;                
+                            $mail->isSMTP();                                            //Send using SMTP
+                            $mail->Host       = 'mail.aupaysdescomptines.fr';                     //Set the SMTP server to send through
+                            $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+                            $mail->Username   = 'equipe@aupaysdescomptines.fr';                     //SMTP username
+                            $mail->Password   = '';                               //SMTP password
+                            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+                            $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+
+                            //Recipients
+                            $mail->setFrom($email);
+                            $mail->addAddress($to);
+                            $mail->AddCC("tdnet59@gmail.com");
+
+                            //Content
+                            $mail->isHTML(true);                                  //Set email format to HTML
+                            $mail->Subject = $_POST['object'];
+                            $mail->Body    = $mailContent;
+                            $mail->AltBody = "Email recu de votre site web de la part de $name via le mail, $email. Voici le message : $message";
+
+                            $mail->send();
                             $success_send = true;
-                        } else {
+                        } catch (Exception $e) {
+                            //Mailer Error : $mail->ErrorInfo
                             $error_send = true;
                         }
                     }
