@@ -1598,7 +1598,7 @@ section.legal-mentions strong{
         display: none;
     }
     .manual-btn{
-        padding: 6px;
+        display: none;
     }
     /* section : Further-information */
     section.FurtherInformation
