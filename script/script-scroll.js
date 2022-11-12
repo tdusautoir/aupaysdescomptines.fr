@@ -11,32 +11,19 @@ let observer = new IntersectionObserver(
   }
 );
 
-/* Accueil */
+let observeds = [
+  document.querySelector(".DefinitionAPDC"),
+  document.querySelector(".SliderAndContent"),
+  document.querySelector(".location"),
+  document.querySelector(".schedules"),
+  document.querySelector("section.profile-card"),
+  document.querySelector(".form-container"),
+];
 
-let definitionAPDC = document.querySelector(".DefinitionAPDC");
-let SliderAndContent = document.querySelector(".SliderAndContent");
-let locations = document.querySelector(".location");
-let schedules = document.querySelector(".schedules");
-
-if (definitionAPDC) {
-  observer.observe(definitionAPDC);
-  observer.observe(SliderAndContent);
-  observer.observe(locations);
-  observer.observe(schedules);
-}
-
-/* Equipe */
-
-let sectionProfile = document.querySelector("section.profile-card");
-
-if (sectionProfile) {
-  observer.observe(sectionProfile);
-}
-
-/* Contact */
-
-let form = document.querySelector(".form-container");
-
-if (form) {
-  observer.observe(form);
+if (observeds) {
+  observeds.forEach((observed) => {
+    if (observed) {
+      observer.observe(observed);
+    }
+  });
 }
